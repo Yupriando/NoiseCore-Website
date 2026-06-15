@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.head {
+  background-color: #27374d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.logo img,
+.account img {
+  width: 40px;
+  height: 40px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #b9b9b9;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.deals-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.deals-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #dfe1e4;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.old-price {
+  font-size: 1rem;
+  color: red;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.membership-section {
+  background-color: #27374d;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.membership-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.membership-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.join-btn {
+  background-color: #ffffff;
+  color: #27374d;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: white;
+  color: #698ec3;
+}
+
+.site-footer {
+  background-color: #27374d;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #e4e4e4;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-info p {
+  font-size: 0.85rem;
+  color: #dddddd;
+}
+
+.product-card,
+.promotion-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 480px) {
+  .deals-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .bundle-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .head {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .navigation {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .account {
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo span {
+    font-size: 1.2rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navigation a {
+    font-size: 0.95rem;
+  }
+
+  .account img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+}
